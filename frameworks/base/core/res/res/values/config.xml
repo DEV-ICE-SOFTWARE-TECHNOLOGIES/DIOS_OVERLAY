@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2022, DEV ICE SOFTWARE TECHNOLOGIES
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- Whether dialogs should close automatically when the user touches outside
+         of them.  This should not normally be modified. -->
+    <bool name="config_closeDialogWhenTouchOutside">false</bool>
+
+    <!-- Flag indicating whether we should enable the automatic brightness.
+         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Flag indicating whether we should enable smart battery. -->
+    <bool name="config_smart_battery_available">true</bool>
+
+    <!-- Flag indicating whether we should enable camera-based autorotate -->
+    <bool name="config_camera_autorotate">true</bool>
+
+    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
+    <bool name="config_unplugTurnsOnScreen">false</bool>
+
+    <!-- If this is true, the message that USB is only being used for charging will be shown. -->
+    <bool name="config_usbChargingMessage">false</bool>
+
+    <!-- Set this true only if the device has separate attention and notification lights. -->
+    <bool name="config_useAttentionLight">false</bool>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">true</bool>
+
+    <!-- If this is true, key chords can be used to take a screenshot on the device. -->
+    <bool name="config_enableScreenshotChord">true</bool>
+
+    <!-- If true, enables auto-rotation features using the accelerometer.
+         Otherwise, auto-rotation is disabled.  Applications may still request
+         to use specific orientations but the sensor is ignored and sensor-based
+         orientations are not available.  Furthermore, all auto-rotation related
+         settings are omitted from the system UI.  In certain situations we may
+         still use the accelerometer to determine the orientation, such as when
+         docked if the dock is configured to enable the accelerometer. -->
+    <bool name="config_supportAutoRotation">true</bool>
+
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Indicate whether closing the lid causes the lockscreen to appear.
+         The default is false. -->
+    <bool name="config_lidControlsScreenLock">true</bool>
+
+    <!-- Indicate whether closing the lid causes the device to go to sleep and opening
+         it causes the device to wake up.
+         The default is false. -->
+    <bool name="config_lidControlsSleep">true</bool>
+
+    <!-- Indicates whether to enable an animation when unfolding a device or not -->
+    <bool name="config_unfoldTransitionEnabled">true</bool>
+
+    <!-- Indicates whether to enable hinge angle sensor when using unfold animation -->
+    <bool name="config_unfoldTransitionHingeAngle">true</bool>
+
+    <!-- Control the default UI mode type to use when there is no other type override
+         happening.  One of the following values (See Configuration.java):
+             1  UI_MODE_TYPE_NORMAL
+             4  UI_MODE_TYPE_TELEVISION
+             5  UI_MODE_TYPE_APPLIANCE
+             6  UI_MODE_TYPE_WATCH
+             7  UI_MODE_TYPE_VR_HEADSET
+         Any other values will have surprising consequences. -->
+    <integer name="config_defaultUiModeType">1</integer>
+
+    <!--  Control whether to lock UI mode to what is selected from config_defaultUiModeType.
+          Once UI mode is locked, applications cannot change it anymore. -->
+    <bool name="config_lockUiMode">false</bool>
+
+    <!--  Control whether to lock day/night mode change from normal application. When it is
+          true, day / night mode change is only allowed to apps with MODIFY_DAY_NIGHT_MODE
+          permission. -->
+    <bool name="config_lockDayNightMode">true</bool>
+
+    <!-- Control the default night mode to use when there is no other mode override set.
+         One of the following values (see UiModeManager.java):
+             0 - MODE_NIGHT_AUTO
+             1 - MODE_NIGHT_NO
+             2 - MODE_NIGHT_YES
+    -->
+    <integer name="config_defaultNightMode">0</integer>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware for individual layers. -->
+    <bool name="config_setColorTransformAcceleratedPerLayer">true</bool>
+
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         that have a HWC implementation that can apply the matrix passed to setColorTransform
+         without impacting power, performance, and app compatibility (e.g. protected content). -->
+    <bool name="config_nightDisplayAvailable">@bool/config_setColorTransformAccelerated</bool>
+
+    <!-- Default mode to control how Night display is automatically activated.
+         One of the following values (see ColorDisplayManager.java):
+             0 - AUTO_MODE_DISABLED
+             1 - AUTO_MODE_CUSTOM_TIME
+             2 - AUTO_MODE_TWILIGHT
+    -->
+    <integer name="config_defaultNightDisplayAutoMode">2</integer>
+
+    <!-- Default strength, in percentage, of bright color reduction when activated. -->
+    <integer name="config_reduceBrightColorsStrengthDefault">50</integer>
+
+    <!-- Minimum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMin">25</integer>
+
+    <!-- Maximum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMax">90</integer>
+
+    <!-- Boolean indicating whether display white balance is supported. -->
+    <bool name="config_displayWhiteBalanceAvailable">true</bool>
+
+    <!-- Boolean indicating whether display white balance should be enabled by default. -->
+    <bool name="config_displayWhiteBalanceEnabledDefault">true</bool>
+
+    <!-- Minimum color temperature, in Kelvin, supported by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureMin">4000</integer>
+
+    <!-- Maximum color temperature, in Kelvin, supported by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureMax">8000</integer>
+
+    <!-- Default color temperature, in Kelvin, used by display white balance. -->
+    <integer name="config_displayWhiteBalanceColorTemperatureDefault">6500</integer>
+
+    <!-- Whether the setting to change long press on power behaviour from default to assistant (5)
+         is available in Settings.
+     -->
+    <bool name="config_longPressOnPowerForAssistantSettingAvailable">true</bool>
+
+    <!-- Control the behavior when the user long presses the power button for a long time.
+            0 - Nothing
+            1 - Global actions menu
+    -->
+    <integer name="config_veryLongPressOnPowerBehavior">0</integer>
+
+    <!-- Control the behavior when the user presses the power and volume up buttons together.
+            0 - Nothing
+            1 - Mute toggle
+            2 - Global actions menu
+    -->
+    <integer name="config_keyChordPowerVolumeUp">1</integer>
+
+    <!-- Control the behavior when the user long presses the back button.  Non-zero values are only
+         valid for watches as part of CDD/CTS.
+            0 - Nothing
+            1 - Go to voice assist
+    -->
+    <integer name="config_longPressOnBackBehavior">0</integer>
+
+    <!-- Allows activities to be launched on a long press on power during device setup. -->
+    <bool name="config_allowStartActivityForLongPressOnPowerInSetup">false</bool>
+
+    <!-- Control the behavior when the user short presses the power button.
+            0 - Nothing
+            1 - Go to sleep (doze)
+            2 - Really go to sleep (don't doze)
+            3 - Really go to sleep and go home (don't doze)
+            4 - Go to home
+            5 - Dismiss IME if shown. Otherwise go to home
+    -->
+    <integer name="config_shortPressOnPowerBehavior">1</integer>
+
+    <!-- Control the behavior when the user double presses the power button.
+            0 - Nothing
+            1 - Toggle theater mode setting
+            2 - Brightness boost
+            3 - Launch target activity defined by config_doublePressOnPowerTargetActivity
+                if available
+    -->
+    <integer name="config_doublePressOnPowerBehavior">3</integer>
+
+    <!-- Activity name for the default target activity to be launched. Note that
+            config_doublePressOnPowerBehavior must be set to 3 for this to work. [DO NOT TRANSLATE]
+    -->
+    <string name="config_doublePressOnPowerTargetActivity" translatable="false"></string>
+
+    <!-- Control the behavior when the user triple presses the power button.
+            0 - Nothing
+            1 - Toggle theater mode setting
+            2 - Brightness boost
+    -->
+    <integer name="config_triplePressOnPowerBehavior">2</integer>
+
+    <!-- Control the behavior when the user presses the sleep button.
+            0 - Go to sleep (doze)
+            1 - Go to sleep (doze) and go home
+    -->
+    <integer name="config_shortPressOnSleepBehavior">0</integer>
+
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- De we do icon badges? Used to decide if there should be a disable option-->
+    <bool name="config_notificationBadging">true</bool>
+
+    <!-- Don't show lock screen before unlock screen (PIN/pattern/password) -->
+    <bool name="config_enableLockBeforeUnlockScreen">true</bool>
+
+    <!-- Disable lockscreen rotation by default -->
+    <bool name="config_enableLockScreenRotation">true</bool>
+
+    <!-- Is the device capable of hot swapping an UICC Card -->
+    <bool name="config_hotswapCapable">true</bool>
+
+    <!-- Is the lock-screen disabled for new users by default -->
+    <bool name="config_disableLockscreenByDefault">false</bool>
+
+    <!-- If true, enables verification of the lockscreen credential in the factory reset protection
+        flow. This should be true if gatekeeper / weaver credentials can still be checked after a
+        factory reset. -->
+    <bool name="config_enableCredentialFactoryResetProtection">true</bool>
+
+    <!-- Control the behavior when the user long presses the home button.
+            0 - Nothing
+            1 - Launch all apps intent
+            2 - Launch assist intent
+            3 - Launch notification panel
+         This needs to match the constants in
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+    -->
+    <integer name="config_longPressOnHomeBehavior">2</integer>
+
+    <!-- Control the behavior when the user double-taps the home button.
+            0 - Nothing
+            1 - Recent apps view in SystemUI
+            2 - Picture-in-picture menu
+         This needs to match the constants in
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+    -->
+    <integer name="config_doubleTapOnHomeBehavior">2</integer>
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
+
+    <!-- If true, will force all packages on any system partition as queryable by any app regardless
+         of the contents of its manifest. -->
+    <bool name="config_forceSystemPackagesQueryable">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- True if the device supports system navigation keys. -->
+    <bool name="config_supportSystemNavigationKeys">false</bool>
+
+    <!-- Whether the device supports non-resizable activity in multi windowing modes.
+         -1: The device doesn't support non-resizable in multi windowing modes.
+          0: The device supports non-resizable in multi windowing modes only if this is a large
+             screen (smallest width >= {@link config_largeScreenSmallestScreenWidthDp}).
+          1: The device always supports non-resizable in multi windowing modes.
+    -->
+    <integer name="config_supportsNonResizableMultiWindow">1</integer>
+
+    <!-- True if the device supports at least one form of multi-window.
+         E.g. freeform, split-screen, picture-in-picture. -->
+    <bool name="config_supportsMultiWindow">true</bool>
+
+    <!-- True if the device supports split screen as a form of multi-window. -->
+    <bool name="config_supportsSplitScreenMultiWindow">true</bool>
+
+    <!-- Ultrasound support for Mic/speaker path -->
+    <!-- Whether the default microphone audio source supports near-ultrasound frequencies
+         (range of 18 - 21 kHz). -->
+    <bool name="config_supportMicNearUltrasound">true</bool>
+    <!-- Whether the default speaker audio output path supports near-ultrasound frequencies
+         (range of 18 - 21 kHz). -->
+    <bool name="config_supportSpeakerNearUltrasound">true</bool>
+
+    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
+
+    <!-- Default value for Settings.ASSIST_LONG_PRESS_HOME_ENABLED -->
+    <bool name="config_assistLongPressHomeEnabledDefault">true</bool>
+    <!-- Default value for Settings.ASSIST_TOUCH_GESTURE_ENABLED -->
+    <bool name="config_assistTouchGestureEnabledDefault">true</bool>
+
+    <!-- Whether this device is supporting the software microphone toggle -->
+    <bool name="config_supportsMicToggle">true</bool>
+    <!-- Whether this device is supporting the camera toggle -->
+    <bool name="config_supportsCamToggle">true</bool>
+    <!-- Whether this device is supporting the hardware microphone toggle -->
+    <bool name="config_supportsHardwareMicToggle">false</bool>
+    <!-- Whether this device is supporting the hardware camera toggle -->
+    <bool name="config_supportsHardwareCamToggle">false</bool>
+    <!-- Whether a camera intent is launched when the lens cover is toggled -->
+    <bool name="config_launchCameraOnCameraLensCoverToggle">true</bool>
+    <!-- Whether changing sensor privacy SW setting requires device to be unlocked -->
+    <bool name="config_sensorPrivacyRequiresAuthentication">true</bool>
+    
+</resources>
